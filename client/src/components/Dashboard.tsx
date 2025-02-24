@@ -38,7 +38,7 @@ const UserProfile = () => {
         const { fullName, dob, currentAddress, livingDuration, about } = output.personalInfo;
         setPersonalInfo({
           fullName,
-          dob: dob ? new Date(dob).toLocaleDateString() : null,
+          dob: dob && new Date(dob).toLocaleDateString() ,
           currentAddress,
           livingDuration,
           about
