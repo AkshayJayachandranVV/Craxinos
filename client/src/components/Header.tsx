@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import { MdHelpOutline } from "react-icons/md";
 import images from "../assets/images.jpeg";
 
