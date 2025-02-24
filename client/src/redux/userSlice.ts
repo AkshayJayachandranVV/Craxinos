@@ -49,9 +49,21 @@ export const userSlice = createSlice({
             state.employmentStatus = action.payload.employmentStatus;
             state.additionalSavings = action.payload.additionalSavings
         },
+        removeData: (state) => {
+            state.id = null;
+            state.email = null;
+            state.mobile = null;
+            state.fullname = null;
+            state.dob = null;
+            state.currentAddress = null;
+            state.livingDuration = null;
+            state.about = null;
+            state.employmentStatus = null;
+            state.additionalSavings = null;
+        }
     }
 });
 
-export const {createAccount,personalInfo,financialInfo} = userSlice.actions;
+export const {createAccount,personalInfo,financialInfo,removeData} = userSlice.actions;
 
 export default userSlice.reducer;

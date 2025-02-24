@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { financialInfo } from "../redux/userSlice";
 import { toast } from "react-toastify";
 import { FinancialInfoFormData } from "../interface/IUser";
+import {  removeData } from "../redux/userSlice";
 
 function FinancialInformation() {
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ function FinancialInformation() {
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(generatedUrl);
+    dispatch(removeData());
     toast.success("URL copied to clipboard");
   };
 
