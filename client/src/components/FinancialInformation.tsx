@@ -33,7 +33,7 @@ function FinancialInformation() {
       if (response?.data.success) {
         console.log("success");
         dispatch(financialInfo(response.data.data));
-        setGeneratedUrl(`http://localhost:5173/dashboard/${userId}`); 
+        setGeneratedUrl(`https://craxinos-khaki.vercel.app/dashboard/${userId}`); 
         setModalOpen(true);
       } else {
         console.log("failure");
